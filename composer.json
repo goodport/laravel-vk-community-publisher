@@ -1,0 +1,52 @@
+{
+    "name": "goodport/laravel-vk-community-publisher",
+    "description": "Publish posts and links with preview images to VK communities.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "vk",
+        "vkontakte",
+        "community",
+        "wall"
+    ],
+    "require": {
+        "php": "^8.3",
+        "illuminate/contracts": "^12.0",
+        "illuminate/http": "^12.0",
+        "illuminate/support": "^12.0",
+        "intervention/image": "^2.5",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.32",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Goodport\\VkCommunityPublisher\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Goodport\\VkCommunityPublisher\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Goodport\\VkCommunityPublisher\\VkCommunityPublisherServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/pint"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
